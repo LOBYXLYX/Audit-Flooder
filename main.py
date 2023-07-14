@@ -48,7 +48,7 @@ class Discord:
 
     def send_log_audit(self, token, channel_id, amount, threads, delay):
         for i in range(amount):
-        invite_data = {
+            invite_data = {
                 "max_age": 86400,
                 "max_uses": 1,
                 "unique": True
