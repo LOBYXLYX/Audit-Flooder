@@ -48,7 +48,7 @@ class Discord:
 
     def send_log_audit(self, token, channel_id, amount, threads, delay):
         for i in range(amount):
-            audit_data = {
+        invite_data = {
                 "max_age": 86400,
                 "max_uses": 1,
                 "unique": True
@@ -56,7 +56,7 @@ class Discord:
             try:
                 sess = self.session.post(
                     f"https://discord.com/api/v9/channels/{channel_id}/invites",
-                    headers=self.headers, json=audit_data
+                    headers=self.headers, json=invite_data
                 )
 
                 if sess.status_code == 200:
