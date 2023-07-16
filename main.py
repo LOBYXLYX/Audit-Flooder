@@ -72,7 +72,7 @@ class Discord:
             except Exception as e: print(e)
 
     def main(self):
-        os.system("clear" if os.name == "nt" else "clear")
+        os.system("cls" if os.name == "nt" else "clear")
         print(f"{W}Loaded {len(self.tokens)} tokens\n")
         print(self.banner)
         try:
